@@ -1,0 +1,42 @@
+<% 
+
+const js = [
+  "/cli/main.js"
+];
+
+const css = [
+  "/cli/main.css"
+];
+
+const jscdn = [
+  "https://code.jquery.com/jquery-3.3.1.min.js",
+  "https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"
+];
+
+const csscdn = [
+  // "https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
+  "https://stackpath.bootstrapcdn.com/bootswatch/4.1.1/flatly/bootstrap.min.css"
+];
+
+const jslocal = [
+  "/cli/lib/jquery/jquery.js",
+  "/cli/lib/bootstrap/bootstrap.js"
+];
+
+const csslocal = [
+  // "/cli/lib/bootstrap/bootstrap.css"
+  "/cli/lib/bootstrap/bootstrap-flatly.css"
+];
+
+if (!loadLocalLib) {
+  scripts.push(...jscdn);
+  stylesheets.push(...csscdn);
+} else {
+  scripts.push(...jslocal);
+  stylesheets.push(...csslocal);
+}
+
+scripts.push(js);
+stylesheets.push(css);
+-%>
+<%- include head.ejs %>

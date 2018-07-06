@@ -1,0 +1,8 @@
+#js-enable {
+
+  position: fixed !important;
+  bottom: 100px !important;
+  right: 0px !important;
+
+  padding: 10px !important;
+}

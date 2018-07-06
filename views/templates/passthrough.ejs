@@ -1,0 +1,38 @@
+<%
+
+-%>
+    <div id="passthrough">
+      <div id="ie-418">
+        <div id="overlay" class="ie-418" style="background-color: rgba(255, 255, 255, 0.250);">
+          <img src="/cli/error/badvert.png" />
+          <h3>IE sucks. Get something better!</h3>
+          <br />
+          <h4><a id="overlay-close" onclick="document.getElementById('overlay').style.display = 'none'"></a></h4>
+        </div>
+        <script>
+          function init () {
+            document.getElementById("overlay").style.display = "block";
+            
+            setTimeout(() => { 
+              document.getElementById("overlay-close").innerHTML = "Got it!";
+            }, 5000);
+          }
+
+          /*@cc_on @*/
+          /*@if (@_win32)
+            document.write("<script id=__ie_onload defer src=javascript:void(0)><\/script>");
+            var script = document.getElementById("__ie_onload");
+            script.onreadystatechange = function() {
+              if (this.readyState == "complete") {
+                init();
+              }
+            };
+          /*@end @*/
+
+          if (!(/*@cc_on!@*/false || !!document.documentMode)) {
+            let e = document.getElementById('passthrough');
+            e.parentNode.removeChild(e);
+          }
+        </script>
+      </div>
+    </div>

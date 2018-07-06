@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title><%= title; %> | Arct</title>
+    
+    <meta charset="utf-8"/>
+    -%>
+    <% for (let i = 0; i < scripts.length; i++) { %>
+    <%- "<script src=\"" + scripts[i] + "\"></script>" -%>
+    <% } %>
+    -%>
+    <% for (let i = 0; i < stylesheets.length; i++) { %>
+    <%- "<link rel=\"stylesheet\" href=\"" + stylesheets[i] + "\" />" -%>
+    <% } %>
+
+  </head>
+
+  <body>
+<%- include passthrough.ejs -%>
