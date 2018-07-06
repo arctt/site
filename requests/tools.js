@@ -21,6 +21,12 @@ module.exports = (app) => {
       return res.render("templates/redirect.ejs", {
         url: "/tools"
       });
+
+    for (let i = 0; i < availible.length; i++)
+      if (tool)
+        return res.render("templates/redirect.ejs", {
+          url: "/tools"
+        });
   });
 
   app.get('/dev', (req, res) => {
