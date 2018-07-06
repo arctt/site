@@ -11,4 +11,19 @@ module.exports = (app) => {
       loadLocalLib: req.query.lib === "local"
     });
   });
+
+  app.get('/t', (req, res) => {
+    let tool = req.query.tool;
+
+    let availible = [];
+
+    if (!tool)
+      return res.render("templates/redirect.ejs", {
+        url: "/tools"
+      });
+  });
+
+  app.get('/dev', (req, res) => {
+
+  });
 }
