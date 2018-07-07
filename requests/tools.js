@@ -6,7 +6,7 @@ module.exports = (app) => {
       scripts: [],
       stylesheets: ['/cli/pages/root/main.css'],
 
-      navbarItem: 0,
+      navbarItem: 3,
 
       loadLocalLib: req.query.lib === "local"
     });
@@ -14,7 +14,6 @@ module.exports = (app) => {
 
   app.get('/t', (req, res) => {
     let tool = req.query.tool;
-
     let availible = [];
 
     if (!tool)
@@ -22,11 +21,16 @@ module.exports = (app) => {
         url: "/tools"
       });
 
-    for (let i = 0; i < availible.length; i++)
-      if (tool)
-        return res.render("templates/redirect.ejs", {
+    availible.forEach((t) => {
+      if (tool === t)
+        return res.render("pages/tools/" + tool + ".ejs", {
           url: "/tools"
         });
+    });
+
+    res.render("templates/redirect.ejs", {
+      url: "/tools"
+    });
   });
 
   app.get('/dev', (req, res) => {
