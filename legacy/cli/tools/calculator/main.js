@@ -1,48 +1,48 @@
-var waitCount = '.';
+var waitCount = '.'
 
 function wait (elem) {
-	elem.innerHTML = 'Working' + waitCount;
-	waitCount += '.';
-	if (waitCount.length > 3) waitCount = '.';
+  elem.innerHTML = 'Working' + waitCount
+  waitCount += '.'
+  if (waitCount.length > 3) waitCount = '.'
 }
 
 function getScriptPath (js) {
-	return window.URL.createObjectURL(new Blob([js],{type:'text/javascript'}));
+  return window.URL.createObjectURL(new Blob([js], {type: 'text/javascript'}))
 }
 
 function work (func) {
-	let respond = setInterval(() => { wait(document.getElementById('answer')); }, 1000);
-	let input = document.getElementById('input').value;
-	let input2 = document.getElementById('input2').value
-	let payload;
-	switch (func) {
-		case 'EQU':
-			payload = `equals(${input})`;
-			break;
-		case 'PRI':
-			payload = `isPrime(equals(${input}))`;
-			break;
-		case 'FAC':
-			payload = `factors(equals(${input}), false)`;
-			break;
-		case 'PFA':
-			payload = `factors(equals(${input}), true)`;
-			break;
-		case 'PCM':
-			payload = `pf(equals(${input}))`;
-			break;
-		case 'GCF':
-			payload = `gcf(equals(${input}), equals(${input2}))`;
-			break;
-		case 'GCD':
-			payload = `gcd(equals(${input}), equals(${input2}))`;
-			break;
-		case 'LCM':
-			payload = `lcm(equals(${input}), equals(${input2}))`;
-			break;
-	}
-	
-	let url = getScriptPath(`
+  let respond = setInterval(() => { wait(document.getElementById('answer')) }, 1000)
+  let input = document.getElementById('input').value
+  let input2 = document.getElementById('input2').value
+  let payload
+  switch (func) {
+    case 'EQU':
+      payload = `equals(${input})`
+      break
+    case 'PRI':
+      payload = `isPrime(equals(${input}))`
+      break
+    case 'FAC':
+      payload = `factors(equals(${input}), false)`
+      break
+    case 'PFA':
+      payload = `factors(equals(${input}), true)`
+      break
+    case 'PCM':
+      payload = `pf(equals(${input}))`
+      break
+    case 'GCF':
+      payload = `gcf(equals(${input}), equals(${input2}))`
+      break
+    case 'GCD':
+      payload = `gcd(equals(${input}), equals(${input2}))`
+      break
+    case 'LCM':
+      payload = `lcm(equals(${input}), equals(${input2}))`
+      break
+  }
+
+  let url = getScriptPath(`
 		// BEGINNING OF FUNCTIONS
 		function equals (exp) {
 			return eval(exp);
@@ -139,11 +139,11 @@ function work (func) {
 		self.addEventListener('message',(e) => {
 			self.postMessage('' + ${payload});
 		}, false);
-	`);
-	let worker = new Worker(url);
-	worker.addEventListener('message', (e) => {
-		clearInterval(respond);
-  	document.getElementById('answer').innerHTML = e.data;
-	}, false);
-	worker.postMessage('$');
+	`)
+  let worker = new Worker(url)
+  worker.addEventListener('message', (e) => {
+    clearInterval(respond)
+  	document.getElementById('answer').innerHTML = e.data
+  }, false)
+  worker.postMessage('$')
 }
