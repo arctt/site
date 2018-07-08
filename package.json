@@ -4,8 +4,14 @@
   "description": "",
   "main": "./main.js",
   "scripts": {
+    "start": "nodemon",
     "test": "standard && nodemon",
-    "start": "nodemon"
+
+    "build": "echo 'No build specified' && exit",
+    "debug": "echo 'No debug specified' && exit",
+
+    "lint": "standard",
+    "lint-fix": "standard --fix"
   },
   "author": "Arctiic",
   "license": "MIT",
