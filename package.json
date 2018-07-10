@@ -13,6 +13,12 @@
     "lint": "standard",
     "lint-fix": "standard --fix"
   },
+  "standard": {
+    "ignore": [
+      "/legacy/*",
+      "/cli/lib/*"
+    ]
+  },
   "author": "Arctiic",
   "license": "MIT",
   "devDependencies": {
