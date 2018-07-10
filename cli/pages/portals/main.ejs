@@ -1,0 +1,91 @@
+<%
+function changeCol(id, colour) {
+  $(id).css("background-color" , colour);
+}
+
+function changeBlur(id, filter) {
+  $(id).css("filter" , filter);
+}
+
+function changeShade(id, size) {
+  $(id).css("box-shadow" , size);
+}
+
+function start () {
+    changeCol("#portalIn", "#17a823");
+    changeBlur("#portalT", "blur(1px)");
+    changeShade("#portalShade", "0px 0px 1px");
+    changeCol("#BportalIn", "#499dff");
+    changeBlur("#BportalT", "blur(0.5px)");
+    changeShade("#BportalShade", "0px 0px 1px");
+    changeCol("#CportalIn", "#ffe484");
+    changeBlur("#CportalT", "blur(0.5px)");
+    changeShade("#CportalShade", "0px 0px 1px");
+    setTimeout(() => {
+        changeCol("#portalIn", "#60c168");
+        changeBlur("#portalT", "blur(0.1px)");
+        changeShade("#portalShade", "0px 0px 50px");
+        changeCol("#BportalIn", "#70b2ff");
+        changeBlur("#BportalT", "blur(0.1px)");
+        changeShade("#BportalShade", "0px 0px 50px");
+        changeCol("#CportalIn", "#fce8a1");
+        changeBlur("#CportalT", "blur(0.1px)");
+        changeShade("#CportalShade", "0px 0px 50px");
+    setTimeout(start, 800);
+    }, 800);
+}
+start();
+-%>
+<html>
+ <head>
+   <meta charset="UTF-8">
+   <title></title> <!-- add in head stuff-->
+ </head>
+
+ <body>
+   <div class="center grey"> <!-- Text -->
+     <h1 class="center"></h1> <!-- title of page -->
+   </div>
+
+   <div class="grey"> <!-- Image -->
+     <img class="center img" src="" alt=""> <!-- image stuff here-->
+   </div>
+
+   <div class="grey spacer"></div>
+   <div class="grey center">
+     <div class="holder center">
+       <div class="CportalOut"> <!-- Choose Portal Outer -->
+       <div class="Cspacer"></div>
+       <div class="CportalIn center" id="CportalShade">
+         <div class="CportalIn center customCursor" id="CportalIn"> <!-- Choose Portal Inner -->
+           <div class="center"> <!-- Choose Portal Text -->
+             <p class="CportalT blurryText textshadow" id="CportalT">Choose</p>
+           </div>
+         </div>
+       </div>
+     </div>
+       <div class="BportalOut"> <!-- Back Portal Outer -->
+     <div class="Bspacer"></div>
+     <div class="BportalIn center" id="BportalShade">
+       <div class="BportalIn center customCursor2" id="BportalIn"> <!-- Back Portal Inner -->
+         <div class="center"> <!-- Back Portal Text -->
+           <p class="BportalT blurryText textshadow" id="BportalT">Back</p>
+         </div>
+       </div>
+     </div>
+     </div>
+       <div class="portalOut"> <!-- Next Portal Outer -->
+     <div class="spacer"></div>
+     <div class="portalIn center" id="portalShade">
+       <div class="portalIn center customCursor" id="portalIn"> <!-- Next Portal Inner -->
+         <div class="center"> <!-- Next Portal Text -->
+           <p class="portalT blurryText textshadow" id="portalT">Next</p>
+         </div>
+       </div>
+     </div>
+     </div>
+     </div>
+   </div>
+ </body>
+
+</html>

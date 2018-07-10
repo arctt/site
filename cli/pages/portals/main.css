@@ -1,0 +1,220 @@
+html {
+  background-color: #ccc;
+}
+
+h1 {
+  font-size: 50px;
+  color: #000;
+  text-align: center;
+  font-family: "", cursive, sans-serif;
+  margin: 0;
+  padding: 1px 0 20px 0;
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.img{
+  background-color: #ccc;
+  color: #ccc;
+  width: 60%;
+}
+
+.grey{
+  background-color: #ccc;
+  color: #ccc;
+}
+
+.spacer{
+  margin: 0;
+  padding: 1px 0 0 0;
+}
+
+.portalOut{
+  background-color: #099915;
+  color: #ccc;
+  height: 300px;
+  width: 200px;
+  border-radius: 30px;
+  box-shadow: 0 0 1px 1.5px #0a7f0e;
+  position: relative;
+  top: -290px;
+  left: 110px;
+}
+
+.portalIn{
+  color: #ccc;
+  height: 240px;
+  width: 140px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 20px #17a823;
+	-webkit-box-shadow: 0px 0px 20px #17a823;
+	-moz-box-shadow: 0px 0px 20px #17a823;
+}
+
+.portalT{
+  font-size: 40px;
+  text-align: center;
+  margin: 5;
+  padding: 25px 0 0 0;
+  font-family: "", cursive, sans-serif;
+}
+
+.blurryText {
+   filter: blur(1px);
+}
+
+.customCursor {
+  cursor: url(https://imgur.com/j4rPL4D.png), auto;
+}
+
+.customCursor2 {
+  cursor: url(https://imgur.com/H0upObt.png), auto;
+}
+
+.Bspacer{
+  margin: 0;
+  padding: 0.5px 0 0 0;
+}
+
+.BportalOut{
+  background-color: #0026ff;
+  color: #ccc;
+  height: 145px;
+  width: 100px;
+  border-radius: 15px;
+  box-shadow: 0 0 1px 1.5px #001ab5;
+  position: relative;
+  top: 10px;
+}
+
+.BportalIn{
+  color: #ccc;
+  height: 120px;
+  width: 70px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 20px #499dff;
+	-webkit-box-shadow: 0px 0px 20px #499dff;
+	-moz-box-shadow: 0px 0px 20px #499dff;
+}
+
+.BportalT{
+  font-size: 20px;
+  text-align: center;
+  margin: 5;
+  padding: 0px 0 0 0;
+  font-family: "", cursive, sans-serif;
+}
+
+.Cspacer{
+  margin: 0;
+  padding: 1px 0 0 0;
+}
+
+.CportalOut{
+  background-color: #ffae00;
+  color: #ccc;
+  height: 145px;
+  width: 100px;
+  border-radius: 15px;
+  box-shadow: 0 0 1px 1.5px #ffae00;
+  position: relative;
+}
+
+.CportalIn{
+  color: #ccc;
+  height: 120px;
+  width: 70px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 20px #fff5d1;
+	-webkit-box-shadow: 0px 0px 20px #fff5d1;
+	-moz-box-shadow: 0px 0px 20px #fff5d1;
+}
+
+.CportalT{
+  font-size: 20px;
+  color: black;
+  text-align: center;
+  margin: 5;
+  padding: 0px 0 0 0;
+  font-family: "", cursive, sans-serif;
+}
+
+.holder{
+  height: 300px;
+  width: 310px;
+  position: relative;
+  top: 50px;
+}
+
+#portalT{
+    -webkit-transition: filter 1.2s ease;
+  -moz-transition: filter 1.2s ease;
+  -o-transition: filter 1.2s ease;
+  transition: filter 1.2s ease;
+}
+
+#portalIn{
+  -webkit-transition: background-color 1.2s ease;
+  -moz-transition: background-color 1.2s ease;
+  -o-transition: background-color 1.2s ease;
+  transition: background-color 1.2s ease;
+}
+
+#portalShade{
+  -webkit-transition: box-shadow 2s ease;
+  -moz-transition: box-shadow 2s ease;
+  -o-transition: box-shadow 2s ease;
+  transition: box-shadow 2s ease;
+  position: relative;
+  top: -2.5%;
+}
+
+#BportalT{
+    -webkit-transition: filter 1.2s ease;
+  -moz-transition: filter 1.2s ease;
+  -o-transition: filter 1.2s ease;
+  transition: filter 1.2s ease;
+}
+
+#BportalIn{
+  -webkit-transition: background-color 1.2s ease;
+  -moz-transition: background-color 1.2s ease;
+  -o-transition: background-color 1.2s ease;
+  transition: background-color 1.2s ease;
+}
+
+#BportalShade{
+  -webkit-transition: box-shadow 2s ease;
+  -moz-transition: box-shadow 2s ease;
+  -o-transition: box-shadow 2s ease;
+  transition: box-shadow 2s ease;
+  position: relative;
+  top: -7px;
+}
+
+#CportalT{
+    -webkit-transition: filter 1.2s ease;
+  -moz-transition: filter 1.2s ease;
+  -o-transition: filter 1.2s ease;
+  transition: filter 1.2s ease;
+}
+
+#CportalIn{
+  -webkit-transition: background-color 1.2s ease;
+  -moz-transition: background-color 1.2s ease;
+  -o-transition: background-color 1.2s ease;
+  transition: background-color 1.2s ease;
+}
+
+#CportalShade{
+  -webkit-transition: box-shadow 2s ease;
+  -moz-transition: box-shadow 2s ease;
+  -o-transition: box-shadow 2s ease;
+  transition: box-shadow 2s ease;
+  position: relative;
+  top: -7px;
+}
